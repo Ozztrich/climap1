@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/ubicacionActual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/ubicacionActual"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/climaActual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/climaActual"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="@+id/ubicacionActual"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="@+id/ubicacionActual"
+        app:layout_constraintTop_toBottomOf="@+id/ubicacionActual" />
+
+    <TextView
+        android:id="@+id/descripcionClima"
+        android:layout_width="191dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/descripcionClima"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/climaActual"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="@+id/climaActual"
+        app:layout_constraintTop_toBottomOf="@+id/climaActual" />
+
+    <TextView
+        android:id="@+id/maxActual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="60dp"
+        android:text="@string/maxActual"
+        app:layout_constraintEnd_toEndOf="@+id/descripcionClima"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/descripcionClima"
+        app:layout_constraintTop_toBottomOf="@+id/descripcionClima" />
+
+    <TextView
+        android:id="@+id/minActual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/minActual"
+        app:layout_constraintEnd_toEndOf="@+id/descripcionClima"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/descripcionClima"
+        app:layout_constraintTop_toBottomOf="@+id/descripcionClima" />
+
+    <LinearLayout
+        android:id="@+id/fourDayForecast"
+        android:layout_width="319dp"
+        android:layout_height="139dp"
+        android:layout_marginTop="28dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/maxActual">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/dayOne"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dayTwoForecast"
+                android:text="Day One"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
